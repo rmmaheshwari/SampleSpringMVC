@@ -1,0 +1,10 @@
+data/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml.i
+data/.project.i
+data/src/main/webapp/WEB-INF/resources/js/jquery-2.1.1.min.js.i
+data/pom.xml.i
+data/src/main/webapp/WEB-INF/web.xml.i
+data/.hgignore.i
+data/src/main/webapp/WEB-INF/resources/js/jquery.magnific-popup.min.js.i
+data/src/main/webapp/WEB-INF/pages/index.jsp.i
+data/src/main/java/com/homeshop18/controller/HomePageController.java.i
+data/src/main/webapp/WEB-INF/resources/css/magnific-popup.css.i
