@@ -5,6 +5,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.homeshop18.ui.bean.Product;
+
 @Controller
 @RequestMapping(value="/")
 public class HomePageController {
@@ -12,7 +14,7 @@ public class HomePageController {
 	@RequestMapping(method = RequestMethod.GET)
 	public String welcome(ModelMap model) {
 		model.addAttribute("message", "Welcome to Home Page");
-
+		model.addAttribute("product",new Product());
 		return "index";
 
 	}
