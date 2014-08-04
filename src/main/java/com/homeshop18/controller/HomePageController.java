@@ -1,32 +1,31 @@
 package com.homeshop18.controller;
 
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CookieValue;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.homeshop18.ui.bean.Item;
 import com.homeshop18.ui.bean.Product;
 
 @Controller
-@RequestMapping(value="/")
+@RequestMapping(value = "/")
 public class HomePageController {
 
 	@RequestMapping(method = RequestMethod.GET)
-<<<<<<< HEAD
-	public String welcome(ModelMap model) {
-		model.addAttribute("message", "Welcome to Home Page");
-		model.addAttribute("product",new Product());
-=======
-	public String welcome(@CookieValue(value = "JSESSIONID") String fooCookie, HttpServletRequest request,HttpServletResponse response) {
-		Cookie cookie = new Cookie("JSESSIONID", "1234567890");
-		cookie.setDomain("localhost");
-		response.addCookie(cookie);
-		System.out.println(fooCookie);
->>>>>>> f0ea6022b1efe00795ceaa9d8c2cad3f47e84394
+	public String welcome(Model model) {
+		Product product = new  Product();
+		product.setTitle("Mr.");
+		product.setId(1l);
+		List<Item> items = new ArrayList<Item>();
+		Item item = new Item(); 
+		item.setTitle("RAdha");
+		items.add(item);
+		product.setItems(items); 		
+		model.addAttribute("product", product); 
 		return "index";
 	}
 }

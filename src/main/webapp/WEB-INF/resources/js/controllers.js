@@ -1,4 +1,5 @@
-var phonecatApp = angular.module('phonecatApp', []);
+var productApp = angular.module('productApp', []);
 
-phonecatApp.controller('PhoneListCtrl', function ($scope) {
+productApp.controller('ProductController', function ($scope) {
+	 $scope.product=product;
 });
