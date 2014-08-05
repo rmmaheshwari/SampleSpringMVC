@@ -3,8 +3,6 @@ package com.radha.ui.bean;
 import java.io.Serializable;
 import java.util.List;
 
-import com.homeshop18.ui.bean.Item;
-
 public class Product implements Serializable{
 
 	/**

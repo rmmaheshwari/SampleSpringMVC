@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.homeshop18.ui.bean.Item;
-import com.homeshop18.ui.bean.Price;
-import com.homeshop18.ui.bean.Product;
+import com.radha.ui.bean.Item;
+import com.radha.ui.bean.Price;
+import com.radha.ui.bean.Product;
 
 @Controller
 @RequestMapping(value = "/")
