@@ -1,7 +1,6 @@
 package com.homeshop18.ui.bean;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 
 public class Item implements Serializable {
 	/**
@@ -11,7 +10,7 @@ public class Item implements Serializable {
 
 	private Long id;
 	private String title;
-	private BigDecimal price;
+	private Price price;
 
 	public Long getId() {
 		return id;
@@ -29,11 +28,11 @@ public class Item implements Serializable {
 		this.title = title;
 	}
 
-	public BigDecimal getPrice() {
+	public Price getPrice() {
 		return price;
 	}
 
-	public void setPrice(BigDecimal price) {
+	public void setPrice(Price price) {
 		this.price = price;
 	}
 

@@ -1,5 +1,6 @@
 package com.homeshop18.controller;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.homeshop18.ui.bean.Item;
+import com.homeshop18.ui.bean.Price;
 import com.homeshop18.ui.bean.Product;
 
 @Controller
@@ -28,7 +30,9 @@ public class HomePageController {
 		item.setTitle("RAdha");
 		Item item2 = new Item();
 		item2.setTitle("fd");
-		
+		Price price = new Price();
+		price.setPrice(BigDecimal.TEN);
+		item.setPrice(price);
 		items.add(item);
 		//items.add(item2);
 		product.setItems(items);

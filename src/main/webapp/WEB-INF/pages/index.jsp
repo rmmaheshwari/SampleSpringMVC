@@ -30,7 +30,8 @@
 			<div id="div{{$index}}">
 			<input type="text" name="items[{{$index}}].title" ng-model="item.title" />
 			<input type="text" name="items[{{$index}}].id"ng-model="item.id" />
-			<input type="text" name="items[{{$index}}].price" ng-model="item.price" />
+			<input type="text" name="items[{{$index}}].price.price" ng-model="item.price.price" />
+			<input type="button" ng-click="remove($index)" value="Remove Rows"/>
 			</div>
 		 {{item.title}}
 		</div>
