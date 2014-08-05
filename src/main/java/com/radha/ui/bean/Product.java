@@ -1,4 +1,4 @@
-package com.homeshop18.ui.bean;
+package com.radha.ui.bean;
 
 import java.io.Serializable;
 import java.util.List;
