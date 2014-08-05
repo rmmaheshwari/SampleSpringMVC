@@ -5,9 +5,12 @@ import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.homeshop18.ui.bean.Item;
 import com.homeshop18.ui.bean.Product;
 
@@ -17,15 +20,30 @@ public class HomePageController {
 
 	@RequestMapping(method = RequestMethod.GET)
 	public String welcome(Model model) {
-		Product product = new  Product();
+		Product product = new Product();
 		product.setTitle("Mr.");
 		product.setId(1l);
 		List<Item> items = new ArrayList<Item>();
-		Item item = new Item(); 
+		Item item = new Item();
 		item.setTitle("RAdha");
+		Item item2 = new Item();
+		item2.setTitle("fd");
+		
 		items.add(item);
-		product.setItems(items); 		
-		model.addAttribute("product", product); 
+		//items.add(item2);
+		product.setItems(items);
+		model.addAttribute("product", product);
+		return "index";
+	}
+
+	@RequestMapping(method = RequestMethod.POST)
+	public String post(@ModelAttribute("product") Product product, Model model) {
+		try {
+			System.out.println(new ObjectMapper().writeValueAsString(product));
+		} catch (JsonProcessingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return "index";
 	}
 }
