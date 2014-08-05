@@ -21,21 +21,23 @@
 </script>
 </head>
 <body ng-controller="ProductController">
-	<form:form commandName="product" cssClass="form-horizontal"
-		ng-model="product">
+	<form:form commandName="product" cssClass="form-horizontal">
 		<form:input path="title" type="text" ng-model="product.title" />
-		<form:input path="id" type="text" ng-model="product.id" />
+		<input type="text" name="radha"
+					ng-model="product.id" />
 			{{title}},{{id}}
-			<div  ng-repeat="item in product.items">
+			<div ng-repeat="item in product.items">
 			<div id="div{{$index}}">
-			<input type="text" name="items[{{$index}}].title" ng-model="item.title" />
-			<input type="text" name="items[{{$index}}].id"ng-model="item.id" />
-			<input type="text" name="items[{{$index}}].price.price" ng-model="item.price.price" />
-			<input type="button" ng-click="remove($index)" value="Remove Rows"/>
+				<input type="text" name="items[{{$index}}].title"
+					ng-model="item.title" /> <input type="text"
+					name="items[{{$index}}].id" ng-model="item.id" /> <input
+					type="text" name="items[{{$index}}].price.price"
+					ng-model="item.price.price" /> <input type="button"
+					ng-click="remove($index)" value="Remove Rows" />
 			</div>
-		 {{item.title}}
+			{{item.title}}
 		</div>
-		<input type="button" ng-click="radha()" value="Add More Rows"/>
+		<input type="button" ng-click="radha()" value="Add More Rows" />
 	</form:form>
 </body>
 </html>
