@@ -12,10 +12,7 @@
 		<jdk.version>1.6</jdk.version>
 	</properties>
 
-
-
 	<dependencies>
-
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
